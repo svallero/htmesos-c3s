@@ -1,0 +1,33 @@
+{
+  "id": "/htmesos-master",
+  "cmd": null,
+  "cpus": 1,
+  "mem": 512,
+  "disk": 0,
+  "instances": 1,
+  "container": {
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "svallero/htmesos-centos",
+      "privileged": false,
+      "parameters": [
+        {
+          "key": "net",
+          "value": "testnet"
+        }
+      ],
+      "forcePullImage": false
+    }
+  },
+  "portDefinitions": [],
+  "args": [
+    "-m",
+    "-u",
+    "guest",
+    "-p",
+    "pippo123",
+    "-k",
+    "http://cloud-test-02.to.infn.it/public_keys/dummy.pub"
+  ]
+}

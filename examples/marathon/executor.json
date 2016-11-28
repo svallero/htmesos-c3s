@@ -1,0 +1,32 @@
+{
+  "id": "/htcondor-exec",
+  "cmd": null,
+  "cpus": 0.5,
+  "mem": 256,
+  "disk": 0,
+  "instances": 2,
+  "container": {
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "svallero/htmesos-centos",
+      "privileged": false,
+      "parameters": [
+        {
+          "key": "net",
+          "value": "testnet"
+        }
+      ],
+      "forcePullImage": false
+    }
+  },
+  "portDefinitions": [],
+  "args": [
+    "-e",
+    "192.168.128.16",
+    "-u",
+    "guest",
+    "-k",
+    "http://cloud-test-02.to.infn.it/public_keys/dummy.pub"
+  ]
+}
