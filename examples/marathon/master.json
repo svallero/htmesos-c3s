@@ -1,5 +1,5 @@
 {
-  "id": "/htmesos-master",
+  "id": "/htcondor-master",
   "cmd": null,
   "cpus": 1,
   "mem": 512,

@@ -7,7 +7,7 @@ net="192.168.128.{0,3}"
 role="master"
 curl -XPOST -H "Content-Type: application/json" http://$marathon_host:8080/v2/apps -d @$role.json -u $credentials
 
-#sleep 15
+sleep 15
 
 
 master_ip=`curl http://$marathon_host:8080/v2/apps/htcondor-master  -u $credentials | grep -P -o "$net"`
